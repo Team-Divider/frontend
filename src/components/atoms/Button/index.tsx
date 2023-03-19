@@ -1,18 +1,17 @@
-import React from "react";
 import styled from "styled-components";
-
+import { CSSProperties } from "react";
 export interface ButtonProps {
   text?: string;
+  // width?: string;
+  style?: CSSProperties;
 }
 
-function Button({ text }: ButtonProps) {
-  return <St.Button>{text}</St.Button>;
+function Button(ButtonProps: ButtonProps) {
+  return <St.Button style={ButtonProps.style}>{ButtonProps.text}</St.Button>;
 }
 
 const St = {
-  Button: styled.button`
-    width: 80%;
-  `,
+  Button: styled.button``,
 };
 
 export default Button;
